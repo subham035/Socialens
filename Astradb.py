@@ -1,39 +1,3 @@
-# import os
-# from astrapy import DataAPIClient, Database
-
-# def connect_to_database() -> Database:
-#     """
-#     Connects to a DataStax Astra database.
-#     This function retrieves the database endpoint and application token from the
-#     environment variables `ASTRA_DB_API_ENDPOINT` and `ASTRA_DB_APPLICATION_TOKEN`.
-
-#     Returns:
-#         Database: An instance of the connected database.
-
-#     Raises:
-#         RuntimeError: If the environment variables `ASTRA_DB_API_ENDPOINT` or
-#         `ASTRA_DB_APPLICATION_TOKEN` are not defined.
-#     """
-#     
-
-#     if not token or not endpoint:
-#         raise RuntimeError(
-#             "Environment variables ASTRA_DB_API_ENDPOINT and ASTRA_DB_APPLICATION_TOKEN must be defined"
-#         )
-
-#     # Create an instance of the `DataAPIClient` class with your token.
-#     try:
-#         print("Connecting to database...")
-#         client = DataAPIClient(token)
-#         database = client.get_database(endpoint)
-#         print(f"Connected to database {database.info().name}")
-#     except Exception as e:
-#         print(f"Error connecting to database: {e}")
-
-#     return database
-
-# connect_to_database()
-
 import os
 import uuid
 import pandas as pd
@@ -55,7 +19,7 @@ def connect_to_database() -> Database:
 
     if not token or not endpoint:
         raise RuntimeError(
-            "Environment variables ASTRA_DB_API_ENDPOINT and ASTRA_DB_APPLICATION_TOKEN must be defined"
+            "Environment variables must be defined"
         )
 
     client = DataAPIClient(token)
