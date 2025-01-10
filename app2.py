@@ -197,7 +197,7 @@ def main():
     if menu == "Home":
         # Landing Page
         st.image("assets/Logo/team_logo_lumos.png", width=200)  # Placeholder for the team logo
-        st.title("Welcome to Lumos Social Media Analyzer!")
+        st.title("Welcome to Socialens!")
         st.markdown(
             """
             Explore our AI-powered tool to analyze and optimize your social media performance.
