@@ -10,7 +10,7 @@ class PostAnalyzer:
     def __init__(self):
         try:
             # Load data
-            self.df = pd.read_csv("social_media_engagement.csv")
+            self.df = pd.read_csv("mockGeneratedData/raw/social_media_engagement.csv")
         except FileNotFoundError:
             st.error("Could not find social_media_engagement.csv in the current directory.")
             st.stop()
@@ -196,7 +196,7 @@ def main():
 
     if menu == "Home":
         # Landing Page
-        st.image("team_logo_lumos.png", width=200)  # Placeholder for the team logo
+        st.image("assets/Logo/team_logo_lumos.png", width=200)  # Placeholder for the team logo
         st.title("Welcome to Lumos Social Media Analyzer!")
         st.markdown(
             """
